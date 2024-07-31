@@ -6,19 +6,32 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct ContentView: View {
+    
+    var store: StoreOf<TimerTcaFeature>
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            Text("\(store.time)")
+                .font(.largeTitle)
+                .padding()
+                .background(Color.black.opacity(0.1))
+                .cornerRadius(10)
+            
+            Button(store.isTimerRunning ? "Start" : "Stop") {
+                store.send(.toggleTimerButtonTapped)
+            }
+            
         }
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(store: Store(initialState: TimerTcaFeature.State(), reducer: {
+        TimerTcaFeature()
+    }))
 }

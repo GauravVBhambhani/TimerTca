@@ -11,6 +11,8 @@
 		10EB357A2C59B5430059A8D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB35792C59B5430059A8D8 /* ContentView.swift */; };
 		10EB357C2C59B5440059A8D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10EB357B2C59B5440059A8D8 /* Assets.xcassets */; };
 		10EB357F2C59B5440059A8D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10EB357E2C59B5440059A8D8 /* Preview Assets.xcassets */; };
+		10EB35862C59B5D80059A8D8 /* TimerTcaFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB35852C59B5D80059A8D8 /* TimerTcaFeature.swift */; };
+		10EB35892C59B5EB0059A8D8 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 10EB35882C59B5EB0059A8D8 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		10EB35792C59B5430059A8D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		10EB357B2C59B5440059A8D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10EB357E2C59B5440059A8D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		10EB35852C59B5D80059A8D8 /* TimerTcaFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTcaFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10EB35892C59B5EB0059A8D8 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +59,7 @@
 				10EB35792C59B5430059A8D8 /* ContentView.swift */,
 				10EB357B2C59B5440059A8D8 /* Assets.xcassets */,
 				10EB357D2C59B5440059A8D8 /* Preview Content */,
+				10EB35852C59B5D80059A8D8 /* TimerTcaFeature.swift */,
 			);
 			path = TimerTca;
 			sourceTree = "<group>";
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = TimerTca;
+			packageProductDependencies = (
+				10EB35882C59B5EB0059A8D8 /* ComposableArchitecture */,
+			);
 			productName = TimerTca;
 			productReference = 10EB35742C59B5430059A8D8 /* TimerTca.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 10EB356B2C59B5430059A8D8;
+			packageReferences = (
+				10EB35872C59B5EB0059A8D8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 10EB35752C59B5430059A8D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10EB35862C59B5D80059A8D8 /* TimerTcaFeature.swift in Sources */,
 				10EB357A2C59B5430059A8D8 /* ContentView.swift in Sources */,
 				10EB35782C59B5430059A8D8 /* TimerTcaApp.swift in Sources */,
 			);
@@ -344,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		10EB35872C59B5EB0059A8D8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.12.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		10EB35882C59B5EB0059A8D8 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10EB35872C59B5EB0059A8D8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 10EB356C2C59B5430059A8D8 /* Project object */;
 }
